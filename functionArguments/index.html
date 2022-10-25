@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>function arguments</title>
+  <script>
+    'use strict'
+    window.onload = function () {
+      console.log('window load')
+
+
+
+      function add (a, b= 2, ...arg) {
+        console.log(a)
+        console.log(b)
+        console.log(arg)
+        console.log(arguments)
+      }
+
+      add(9,8,7,6,5,4)
+    }
+  </script>
+</head>
+<body>
+  <h3>查看console</h3>
+
+  <ul>
+    <li>arguments是一个对应于传递给函数的参数的--类数组--对象</li>
+    <li>arguments对象是所有--非箭头函数--中都可使用的局部变量</li>
+    <li>通过arguments可以访问和设置函数参数</li>
+  </ul>
+</body>
+</html>
