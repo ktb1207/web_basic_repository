@@ -14,9 +14,11 @@ function curryFn (fn) {
     if (arguments.length >= fn.length) {
       return fn.apply(this, arguments)
     } else {
+      // 缓存之前参数
       var arg = arguments;
+      // 再返回一个匿名函数，接受剩余不够参数
       return function () {
-        return curried.apply(this, [...arg, ...arguments])
+        return curried.apply(this, [...arg, ...arguments]) // 之前参数，当前参数
       }
     }
   }
