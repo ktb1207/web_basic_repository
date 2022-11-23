@@ -5,12 +5,13 @@
  * @return {*} 
  */
 function flatArr(arr) {
+  // 非数组直接返回
   if(!Array.isArray(arr)) {
     return arr;
   }
 
   const _crr = [];
-
+  // 递归
   arr.forEach(v => {
     if(Array.isArray(v)) {
       _crr.push(...flatArr(v))
