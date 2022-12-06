@@ -9,7 +9,6 @@ function isPalinStr(str){
   if(str.length < 2) {
     return true;
   }
-  debugger
   // 匹配非 0-9，a-z
   const reg = /[^0-9a-z]/g;
   // 不区分大小写
